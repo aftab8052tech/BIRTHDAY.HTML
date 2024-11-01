@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body, html {
+            height: 100%;
+            background: url('bg1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            max-width: 570px;
+            margin: 20px auto; 
+            border: 2px solid #ff4081;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card h1 {
+            color: #ef6f9a;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+        .card h2 {
+            color: #26be79; 
+        }
+        .card h3 {
+            color: #691330; 
+        }
+        .card p {
+            color: #333;
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+        .gif-container {
+            margin: 15px 0;
+            display: inline-block;
+            text-align: center;
+            width: 100%; 
+        }
+        .gif-container img {
+            width: 150px;
+            height: auto;
+            margin: 0 10px; 
+            display: inline-block;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #ff7091;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        .second-page {
+            display: none;
+            background: url('https://www.example.com/birthday-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+            
+            height: 100vh;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .second-page h1 {
+            font-size: 2.5em;
+            color: #9c0f41;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out, pulse 2s infinite;
+            margin-top: 30px ;
+            margin-bottom: 40px;
+        }
+        .container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    max-width: 570px;
+    margin: 15px auto;  
+    border: 2px solid #ff4081;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: block;
+}
+.container img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.container p {
+    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .previous-page {
+            display: none;
+            background: url('https://www.example.com/birthday-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            padding: 20px;
+            width: 100%; /* Ensure full width for background */
+            text-align: center;
+        }
+        .previous-page {
+    background: url('your_previous_page_bg.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    text-align: center; 
+}
+
+.previous-page h1 {
+    margin-top: 280px;
+    font-size: 3em;
+    color: #b23e67; /* Custom color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out, pulse 2s infinite; /* Combine animations */
+}
+
+.previous-page h2 {
+    font-size: 5em;
+    margin-top: 35px;
+    color: #128e56; /* Custom color */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out, pulse 2s infinite; /* Fade-in effect */
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s;
+    margin-top: 45px; /* Spacing above the button */
+}
+
+.button:hover {
+    background-color: #ff7091;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="previous-page" id="previousPage">
+        <h1>Assalamualaikum Warahmatullahi Wabarakatuh</h1>
+        <h2>جنم دن مبارک ہو</h2>
+        <button class="button" onclick="openFirstPage()">START</button>
+    </div>
+
+    <div class="card" id="firstPage" style="display:none;">
+        <h1>Happy Birthday, My Love!</h1>
+        
+        <h2>YOUM-E-PAIDAISH MUBARAK HO, BEGUM</h2>
+        
+        <div class="gif-container">
+            <img src="gif8.gif" alt="Birthday GIF 1" width="150" height="150">
+            <img src="gif2.gif" alt="Birthday GIF 2" width="150" height="150">
+            <img src="gif10.gif" alt="Birthday GIF 3" width="150" height="150">
+        </div>
+        
+        <button class="button" onclick="openSecondPage()">Surprise Message</button>
+    </div>
+
+    <div class="second-page" id="secondPage">
+        <h1>❤️🎂❤️ HAPPY BIRTHDAY , SWEETHEART ❤️🎂❤️</h1>
+        
+        <div class="container1 container">
+            <img src="new10.gif" alt="GIF 1" width="150" height="150">
+            <img src="new6.png" alt="GIF 2" width="150" height="150">
+        </div>
+
+        <div class="container2 container">
+            <p class="quotes">"Assalamualaikum ❤️❤️❤️ ! youm-e-paidaish bohot bahot mubarak begum 🎂🎂🎂 , Allahatala aapko hamesha khush rakhe aapko saari khushiya de , hum dono ko hamesha aise hi sath rakhe , hamare beech jo bhi ladayi jhagde hai unhe dur kare , hum me jo bhi burayiya ho unhe dur kare waise aap me nhi hai mujhe hi hai or aapko mujhe or mujhe aapko samajhne ki taufeek de (Ameen) , meri taraf se meri pyaari or moti(jada nhi thodi si ho) biwi ko bahot saara pyaar 💋💋💋💋💋. Allah aapko sahi sahi sunne or sahi samajhne ki taufeek de jo bolu wahi suno or wahi samajho uska kuch or mtb na nikalo. <br><br>
+            
+            " دل سے دعا ہے کہ آپ کی زندگی ہر لمحہ خوشیوں سے مسرور رہے۔ جنم دن مبارک" <br>
+
+            " تمام خواہشات اور امیدواریوں کے ساتھ آپ کو جنم دن مبارک ہو "<br><br>
+
+            " خدا کرے!!!
+            تمہارا نصیب تمہارا مستقبل
+            تمہاری سوچ سے بھی زیادہ
+            حسین اور خوب صورت ہو۔
+             "<br><br>
+
+            " -آکھوں میں تاروں کی چمک ہونٹوں پر مسکان رہے
+            بھرا دامن رہے خوشیوں سے کھلا چاند سا یہ مکھڑا رہے
+            تمام امیدیں ہوں پوری پوری تمہاری نہ کوئی دل میں ارمان رہے
+            بنیں پھول رہگزر تمہاری منزل تمہاری شاد رہے
+            حرفِ آخر میں یہ دعا ہے خدا سے
+            کہ اسکی رحمت سدا تمہارے ساتھ رہے
+            آمین 
+             "<br><br>
+
+
+            "Happy birthday to
+            the sweetest girl
+            who deserves all the
+            love and happiness
+            in the world"<br><br>
+
+            " To my beautiful wife,
+            Happy Birthday
+            You are the light of my life.
+            I thank my lucky stars every day
+            that I found you. Here's to
+            another amazing year! "<br><br>
+        
+        
+        </p>
+        </div>
+
+        <div class="container3 container">
+            <img src="new13.gif" alt="GIF 3" width="150" height="150">
+            <img src="new15.gif" alt="GIF 4" width="150" height="150">
+        </div>
+    </div>
+
+    <script>
+        function openPreviousPage() {
+            document.getElementById("previousPage").style.display = "block";
+        }
+        function openFirstPage() {
+            document.getElementById("previousPage").style.display = "none";
+            document.getElementById("firstPage").style.display = "block";
+        }
+        function openSecondPage() {
+            document.getElementById("firstPage").style.display = "none";
+            document.getElementById("secondPage").style.display = "block";
+            document.body.style.background = "url('') no-repeat center center fixed";
+            document.body.style.backgroundSize = "cover";
+        }
+    </script>
+
+    <script>
+        openPreviousPage();
+    </script>
+</body>
+</html>
